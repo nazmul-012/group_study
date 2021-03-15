@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving</title>
+</head>
+<body>
+    
+    <!-- problem solution num-2 -->
+    <h1>1.Click the button For print the Full page</h1>
+	<p id="test"></p>
+
+	<button type="button" onclick="window.print()">print the current window</button>
+
+
+
+
+	<!-- problem solution num-3 -->
+    <h1>2. Click The button to see The Date</h1>
+	<button id="date">View Date</button>
+
+	<script type="text/javascript">
+    document.getElementById('date').addEventListener('click', function() {
+        document.getElementById('date').innerHTML=Date();
+    });
+		
+	</script>
+
+<!-- problem solution num-4 -->
+
+<h1>3. <u>Calculation the area of a Triangle:</u></h1>
+    <h4>Let, the three sides of a triangle are a, b, c</h4>
+    <p>a= <input id="first" type="number"></p>
+    <p>b= <input id="second" type="number"></p>
+    <p>c= <input id="third" type="number"></p>
+    <button id="btnArea">Result</button>
+    <p>Area= <input id="result" type="number"></p>
+    
+   <script>
+       document.getElementById('btnArea').addEventListener('click', function(){
+        var a =Number(document.getElementById('first').value);
+        var b =Number(document.getElementById('second').value);
+        var c =Number(document.getElementById('third').value);
+        var s = (a+b+c)/2;
+        document.getElementById('result').value=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+       });
+   </script>
+
+</body>
+</html>
